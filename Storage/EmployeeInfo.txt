@@ -1,0 +1,20 @@
+Employee ID: 2c2efb8c-7a72-4807-a9af-89668bbac4d6
+Name: Ayodele Akinkunmi Oluwaseyi
+Date of Birth: 02/02/2000
+Gender: Male
+Gmail: ayodele@gmail.com
+Home Phone Number: 08123456789
+Address: Lagos,Nigeria
+Marital Status: Married
+Department: Accounting
+--------------------------------------------
+Employee ID: e1a7d433-0086-4296-98e0-b1729faec2d4
+Name: Shobowale Shola Aliko
+Date of Birth: 05/10/2001
+Gender: Male
+Gmail: aliko@gmail.com
+Home Phone Number: 070123456789
+Address: Oyo State, Nigeria
+Marital Status: Single
+Department: Marketing
+--------------------------------------------
