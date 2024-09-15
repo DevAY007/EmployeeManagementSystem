@@ -5,6 +5,6 @@ namespace EmployeeManagement.Interface
     public interface ISalaryInfo
     {
         public SalaryInfoDTO salaryInfo();
-        public void SaveAllEmployeesToFile();
+        public void SaveSalaryInfo();
     }
 }

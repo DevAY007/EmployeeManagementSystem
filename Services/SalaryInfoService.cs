@@ -28,7 +28,7 @@ private List<SalaryInfoDTO> salary = new List<SalaryInfoDTO>();
             return salaryInfo;
         }
 
-         public void SaveAllEmployeesToFile()
+         public void SaveSalaryInfo()
         {
             using (StreamWriter writer = new StreamWriter(@"Storage\EmployeeInfo.txt"))
             {

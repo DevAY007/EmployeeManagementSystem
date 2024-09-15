@@ -20,7 +20,7 @@ private List<NextOfKinDTO> nextKin = new List<NextOfKinDTO>();
             Console.WriteLine("Last Name");
             nextOfKin.LastName = Console.ReadLine();
 
-            Console.WriteLine("DOB");
+            Console.WriteLine("Date Of Birth");
             nextOfKin.DOB = Console.ReadLine();
 
             Console.WriteLine("Gender");
@@ -44,7 +44,7 @@ private List<NextOfKinDTO> nextKin = new List<NextOfKinDTO>();
             nextKin.Add(nextOfKin);
             return nextOfKin;
         }
-        public void SaveAllEmployeesToFile()
+        public void SaveNextOfKinInfo()
         {
             using (StreamWriter writer = new StreamWriter(@"Storage\EmployeeInfo.txt"))
             {

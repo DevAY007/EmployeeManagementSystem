@@ -35,7 +35,7 @@ private List<HealthInfoDTO> health = new List<HealthInfoDTO>();
             return healthInfo;
         }
 
-         public void SaveAllEmployeesToFile()
+         public void SaveHealthInfo()
         {
             using (StreamWriter writer = new StreamWriter(@"Storage\EmployeeInfo.txt"))
             {

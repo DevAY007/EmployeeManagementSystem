@@ -3,7 +3,7 @@ namespace EmployeeManagement
     public interface IEmployeeService
     {
         public CreateEmployeeDTO CreateEmployeeInfo();
-        void SaveAllEmployeesToFile();
-        void DisplayAllEmployees();
+        public void SaveAllEmployeesToFile();
+        public void DisplayAllEmployees();
     }
 }

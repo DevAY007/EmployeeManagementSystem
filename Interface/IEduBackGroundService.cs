@@ -5,6 +5,6 @@ namespace EmployeeManagement
     public interface IEduBackGroundService
     {
         public EducationBackGroundDTO EduBackGround();
-        public void SaveAllEmployeesToFile();
+        public void SaveEducationInfo();
     }
 }

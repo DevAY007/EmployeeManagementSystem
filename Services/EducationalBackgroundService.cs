@@ -39,7 +39,7 @@ private List<EducationBackGroundDTO> eduInfo = new List<EducationBackGroundDTO>(
             return education;
         }
 
-            public void SaveAllEmployeesToFile()
+            public void SaveEducationInfo()
         {
             using (StreamWriter writer = new StreamWriter(@"Storage\EmployeeInfo.txt"))
             {
@@ -56,9 +56,6 @@ private List<EducationBackGroundDTO> eduInfo = new List<EducationBackGroundDTO>(
                     writer.WriteLine("--------------------------------------------");
                 }
             }
-            Console.WriteLine("All employee data has been saved to the file.");
-        }
-            
-            
+        }     
     }
 }

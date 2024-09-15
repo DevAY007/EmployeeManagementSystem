@@ -22,6 +22,9 @@ namespace EmployeeManagement
             Console.WriteLine("Enter Gender");
             employee.Gender = Console.ReadLine();
 
+            Console.WriteLine("Input PhoneNumber");
+            employee.PhoneNumber = Console.ReadLine();
+
             Console.WriteLine("Enter Your Gmail");
             employee.Gmail = Console.ReadLine();
 
@@ -46,6 +49,8 @@ namespace EmployeeManagement
 
         public void SaveAllEmployeesToFile()
         {
+            try
+            {
             using (StreamWriter writer = new StreamWriter(@"Storage\EmployeeInfo.txt"))
             {
                 foreach (CreateEmployeeDTO employee in employees)
@@ -55,6 +60,7 @@ namespace EmployeeManagement
                     writer.WriteLine($"Date of Birth: {employee.DOB}");
                     writer.WriteLine($"Gender: {employee.Gender}");
                     writer.WriteLine($"Gmail: {employee.Gmail}");
+                    writer.WriteLine($"Phone Number : {employee.PhoneNumber}");
                     writer.WriteLine($"Home Phone Number: {employee.HomePhoneNumber}");
                     writer.WriteLine($"Address: {employee.Address}");
                     writer.WriteLine($"Marital Status: {employee.MaritalStatus}");
@@ -63,6 +69,11 @@ namespace EmployeeManagement
                 }
             }
             Console.WriteLine("\nAll employee data has been saved to the file.");
+            }
+            catch(DirectoryNotFoundException)
+            {
+                Console.WriteLine("Could not save Employee Details.\nPlease try again ):");
+            }
         }
         
         public void DisplayAllEmployees()
@@ -75,6 +86,7 @@ namespace EmployeeManagement
                 Console.WriteLine($"Date of Birth: {employee.DOB}");
                 Console.WriteLine($"Gender: {employee.Gender}");
                 Console.WriteLine($"Gmail: {employee.Gmail}");
+                Console.WriteLine($"Phone Number: {employee.PhoneNumber}");
                 Console.WriteLine($"Home Phone Number: {employee.HomePhoneNumber}");
                 Console.WriteLine($"Address: {employee.Address}");
                 Console.WriteLine($"Marital Status: {employee.MaritalStatus}");

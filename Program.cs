@@ -41,12 +41,11 @@ namespace Program
 
             Console.WriteLine("Welcome \nPlease create a password to continue\nPassword can contain digits and special characters");
             string passWord = Console.ReadLine();
-            if(passWord == "")
-            {
-                Console.WriteLine("Invalid Input \nPls Enter A Valid Password");
-            }
-            else
-            {
+                while(passWord == "")
+                {
+                    Console.WriteLine("Invalid PassWord\nEnter a valid PassWord");
+                    passWord = Console.ReadLine();
+                }
                Console.WriteLine("Confirm Password");
                 string confirmPassWord = Console.ReadLine();
 
@@ -62,9 +61,19 @@ namespace Program
                     {
                         Console.WriteLine($"\nAdding Employee {i + 1}:");
                         employeeService.CreateEmployeeInfo();
+                        eduBackGroundService.EduBackGround();
+                        nextOfKinService.NextOfKin();
+                        healthInfo.healthInfo();
+                        salaryInfo.salaryInfo();
+                        workHistory.workHistory();
                     }
 
                     employeeService.SaveAllEmployeesToFile();
+                    eduBackGroundService.SaveEducationInfo();
+                    nextOfKinService.SaveNextOfKinInfo();
+                    healthInfo.healthInfo();
+                    salaryInfo.salaryInfo();
+                    workHistory.workHistory();
 
                     employeeService.DisplayAllEmployees();
 
@@ -86,14 +95,13 @@ namespace Program
     
                     WorkHistoryDTO work = program._workHistory.workHistory();
 
-                    Console.WriteLine("Thank You For Providing this infomations \nBear in mind your Details are safe with us");
+                    Console.WriteLine("Thank You For Providing this Infomations \nBear in mind your Details are safe with us");
                 }
                 }
                 else
                 {
                     Console.WriteLine("Passwords do not match.");
                 }
-            }
         }
     }
 }

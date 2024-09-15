@@ -5,6 +5,6 @@ namespace EmployeeManagement.Interface
     public interface INextOfKinService
     {
         public NextOfKinDTO NextOfKin();
-        public void SaveAllEmployeesToFile();
+        public void SaveNextOfKinInfo();
     }
 }

@@ -40,7 +40,7 @@ private List<WorkHistoryDTO> work = new List<WorkHistoryDTO>();
             return workHistory;
         }
 
-         public void SaveAllEmployeesToFile()
+         public void SaveWorkInfo()
         {
             using (StreamWriter writer = new StreamWriter(@"Storage\EmployeeInfo.txt"))
             {
